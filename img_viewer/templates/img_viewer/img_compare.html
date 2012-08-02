@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+{% block content %}
+<div>
+<h1>Imgs</h1>
+
+</div>
+
+<div>
+<h2> Images </h2>
+<ol id="imgs">
+    {% for comp in comparisons %}
+    <div> 
+        <img src="{{ comp.expected_img_url }}" width ="80" height="80" >
+        <img src={{ comp.new_img_url }} width ="80" height = "80>
+        <li {{comp.expected_img_path }} >
+    </div>{% endfor %}
+
+</ol>
+</div>
+{% endblock %}
